@@ -66,8 +66,8 @@ func main() {
 
 		case 2:
 			fmt.Println("==================================")
-			fmt.Println("-> 1. Cari berdasarkan kategori")
-			fmt.Println("-> 2. Cari berdasarkan tingkat kesulitan")
+			fmt.Println("-> 1. Cari berdasarkan nama")
+			fmt.Println("-> 2. Cari berdasarkan kategori")
 			fmt.Println("-> 3. Kembali")
 			fmt.Println("==================================")
 
@@ -76,9 +76,9 @@ func main() {
 
 			switch pilih {
 			case 1:
-				cariKategori()
+				cariNama()
 			case 2:
-				cariTingkatKesulitan()
+				cariKategori()
 			case 3:
 				fmt.Println("Kembali ke menu...")
 			default:
@@ -176,6 +176,7 @@ func tambah(P *tabProject, nP *int) {
 	P[*nP].id = fmt.Sprintf("PRJ-%d", *nP+1)
 	fmt.Printf("ID project: %s\n", P[*nP].id)
 
+	fmt.Println("Untuk semua input, harap masukkan tanpa spasi - CamelCase (contoh: AnalisisSentimenTwitter)")
 	fmt.Print("Nama Project: ")
 	fmt.Scan(&P[*nP].nama)
 	fmt.Print("Tanggal Project (YYYYMMDD): ")
